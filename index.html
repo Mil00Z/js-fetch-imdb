@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Get Movie IMDB</title>
+</head>
+<body>
+
+  <h1>IMDB To You</h1>
+
+    <form class="input-form" id="submit">
+
+      <div class="input-row">
+        <input list="movies" type="text" id="getMovie" class="city" required>
+        <datalist id="movies">
+          <option value="batman">
+          <option value="viking">
+          <option value="inception">
+          <option value="raulex">
+          <option value="thing">
+        </datalist>
+      </div>
+      
+      <div class="input-row">
+        <label for="search">Un FILM / une LISTE</label>
+        <input type="checkbox" name="search" id="by-search">
+      </div>
+
+
+      <div class="input-row">
+        <label for="date">Année</label>
+        <input type="number" id="movieYear" min="1980" max="2026" step="1" value="1998">
+      </div>
+
+
+      <button type="submit" class="button" id="getData">Get Movies !!</button>
+
+    </form>
+
+</body>
+
+    <script type="module" src="main.js" async></script>
+
+</html>

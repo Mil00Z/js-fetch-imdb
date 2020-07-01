@@ -1,0 +1,188 @@
+/*--------------------------------
+SOMMAIRE
+ ---------------------------------*/
+/*
+#Root Var Css
+#Generals Specs
+#INPUT DATAS
+#DATAS LAYOUT DESIGN 
+#DATAS DESIGN
+#ANOTHER COMPOSANT
+*/
+:root{
+    --white:#fff;
+    --noir:33,33,33;
+    --debeug:coral;
+    --night_blue:  38, 96, 164;
+    --red:255, 35, 109;
+    --orange:238, 91, 53;
+    --lemon: #f2e88f;
+    --clear_blue :#00aeef;
+    --redGradientBis: linear-gradient(90deg,rgba(var(--red),1),rgb(238, 91, 53));
+    --blueYellowGrad : linear-gradient(to left, var(--lemon), var(--clear_blue));
+    --leftMarginCard : 1rem;
+  }
+  
+  body{
+    font-family:"ubuntu","Berkshire Swash", sans-serif;
+    font-size:100%;
+  }
+  
+  img{
+    max-width:100%;
+    object-fit:cover;
+    height:auto;
+
+  }
+  
+  a {
+    text-decoration:none !important;
+  }
+  .debeug{
+      outline:tomato 3px dotted;
+  }  
+
+  h1{
+    display:inline-block;
+    background:var(--redGradientBis);
+    background-size:cover;
+     background-clip:text;
+    -webkit-background-clip: text;
+    color:transparent;
+    font-size:3rem;
+    text-transform: uppercase;
+  }
+  /* INPUT DATAS */
+  #city{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 2px solid rgb(var(--night_blue));
+    border-radius: 20px;
+  }
+  .input-form{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    max-width:100%;
+  }
+  .boldMovie{
+    text-transform: uppercase;
+    font-weight:bold;
+    color:rgb(var(--red));
+  }
+
+  /* DATAS LAYOUT DESIGN */
+  .wrapper {
+    display:flex;
+    justify-content:center;
+    /* width:450px; */
+    flex-wrap: wrap;
+    margin:10vh auto;
+    /* outline:var(--debeug) dotted 1px; */
+  }
+   .mozaik{
+    /* justify-content: flex-start; */
+    justify-content: center;;
+    flex-wrap: wrap;
+    width:auto;
+   }
+  .card{
+    display:flex;
+    flex-flow:column wrap;
+    /* flex:1 1 20%; */
+    flex:0 1 25%;
+    overflow:hidden;
+    padding-bottom:1rem;
+    background:var(--white);
+    border-radius:20px;
+    box-shadow: 0 8px 16px rgba(var(--noir),0.1);
+    will-change: transform;
+    transition:all 0.25s ease-in-out;
+  }
+  .card:hover, .card:focus, .card.active{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 16px rgba(var(--noir),0.5);
+  }
+  .the-thumbnail:hover + .tooltip{
+    opacity:1;
+    transform:translateX(25%);
+  }
+
+
+  .tooltip{
+    position:absolute;
+    top:10%;
+    width:75%;
+    background:rgba(var(--noir),0.81);
+    border-radius:15px 0 0 15px ;
+    padding:0.75rem;
+    color:var(--white);
+    opacity:0;
+    transform:translateX(110%);
+    will-change: transform;
+    transition: opacity 0.22s ease-in-out,transform 0.25s ease-in;
+  }
+  .mozaik > .card {
+    margin-top: 0.75rem;
+    margin-left:0.75rem;
+  }
+  /* DATAS DESIGN */
+  .the-thumbnail{
+    filter:grayscale(5%);
+  }
+  .the-year{
+    position: absolute;
+    top:0;
+    right: 0;
+    max-width:30%;
+    min-height:1rem;
+    padding:0.5rem 1rem;
+    font-size:1.25rem;
+    font-weight:bold;
+    text-align:center;
+    text-shadow:0 0 1px rgba(var(--noir),0.1);
+    border-radius:0 0 0 10px;
+    background:var(--redGradientBis);
+    color:var(--white);
+  }
+  .the-content{
+    margin-left:var(--leftMarginCard);
+  }
+  .the-title{
+    margin-left:var(--leftMarginCard);
+  }
+  .the-link{
+   margin-top:auto;
+   align-self:flex-start;
+   margin-left:var(--leftMarginCard);
+  background:var(--redGradientBis) !important;
+  }
+/* Another Composant */
+  .button{
+    border:none;
+    background:rgba(var(--night_blue),0.99);
+    font-size:1.15rem;
+    color:var(--white);
+    padding:0.75rem;
+    border-radius:15px;
+  }
+  #modal{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    background:rgba(33,33,33,0.25);
+
+  }
+  .modal-content {
+      width:55%;
+      background:var(--white);
+      padding:2.2rem;
+      border-radius:15px;
+  }
+
